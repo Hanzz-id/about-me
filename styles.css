@@ -9,6 +9,7 @@ body {
 }
 
 main {
+    text-align: justify;
     padding-top: 30px;
     background-color: aliceblue;
     min-height: 100vh;
@@ -336,3 +337,4 @@ footer {
     }
 
 }
+
