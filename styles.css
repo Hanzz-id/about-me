@@ -180,9 +180,9 @@ main {
     background-color: #ff3b2f;
     color: white;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     text-align: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 @media (max-width: 600px) {
@@ -337,5 +337,6 @@ footer {
     }
 
 }
+
 
 
