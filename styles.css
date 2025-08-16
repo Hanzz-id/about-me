@@ -253,7 +253,7 @@ main {
 
 .main {
     background-color: transparent;
-    text-align: center;
+    text-align: justify;
     display: grid;
     margin: auto;
     max-width: 80%;
@@ -337,4 +337,5 @@ footer {
     }
 
 }
+
 
