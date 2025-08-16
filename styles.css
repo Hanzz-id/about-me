@@ -3,13 +3,13 @@ body {
     background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     margin-bottom: 0;
     margin-top: 0%;
 }
 
 main {
-    text-align: justify;
     padding-top: 30px;
     background-color: aliceblue;
     min-height: 100vh;
@@ -31,7 +31,6 @@ main {
     width: 20vh;
     border-radius: 50%;
     margin: auto;
-    box-shadow: 0 5px 5px;
 }
 
 @media (max-width:800px) {
@@ -58,7 +57,7 @@ main {
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     border: none;
     background: linear-gradient(90deg, #6a11cb, #2575fc);
     border-radius: 50px;
@@ -157,7 +156,7 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: -200%;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
@@ -177,12 +176,12 @@ main {
 .link2,
 .link3 {
     text-decoration: none;
-    background-color: #ff3b2f;
+    background-color: #374151;
     color: white;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
     text-align: center;
-    gap: 5px;
+
 }
 
 @media (max-width: 600px) {
@@ -335,8 +334,4 @@ footer {
         font-size: 12px;
         padding: 0;
     }
-
 }
-
-
-
