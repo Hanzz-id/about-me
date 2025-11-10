@@ -1,280 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalil Hasan</title>
-    <!-- icon -->
-    <link rel="icon"
-        href="pp.jpg">
-    <meta name="description" content="A vibrant comic-book styled portfolio showcasing amazing design work">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Styles -->
+    <title>Khalil Hasan - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <h1 class="logo-text">Khalil Hasan</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="speech-bubble hero-bubble">
-                    <h1 class="hero-title">Halo Namaku Khalil Hasan</h1>
-                    <p class="hero-subtitle">Santri Ponpes Minhajussunnah Magelang</p>
-                </div>
-                <div class="hero-image">
-                    <img src="https://th.bing.com/th/id/OIP.MaBKuSj29lX-ceQ7ipmFsQHaHX?w=182&h=181&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-                        alt="Comic Designer Character" class="character-img">
-                </div>
-                <div class="speech-bubble hero-bubble-2">
-                    <p>Setiap langkah kecil bisa membawa perubahan besar</p>
-                </div>
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h1>Khalil Hasan</h1>
+                <p>Santri & Tech Enthusiast</p>
             </div>
-            <div class="hero-action">
-                <button class="comic-button btn-primary" onclick="scrollToSection('projects')">
-                    <span>VIEW MY WORK</span>
-                    <i class="fas fa-rocket"></i>
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="comic-divider"></div>
-            </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="pp.jpg" alt="Khalil Hasan" class="profile-picture">
+            <p>Saya adalah seorang santri di salah satu pondok di Jawa Tengah dengan minat yang besar di dunia teknologi. Saya percaya bahwa tradisi dan modernitas dapat berjalan beriringan untuk menciptakan sesuatu yang inovatif.</p>
+        </section>
 
-            <div class="about-grid">
-                <div class="about-panel comic-panel">
-                    <div class="panel-header">
-                        <h3 class="panel-title">MY STORY</h3>
-                    </div>
-                    <div class="panel-content">
-                        <p>Halo! Saya Khalil Hasan, seorang pelajar yang tengah menapaki perjalanan panjang dalam dunia
-                            pembelajaran dan kehidupan. Bagi saya, belajar bukan sekadar mencari nilai, tetapi memahami
-                            makna di balik setiap proses. Saya percaya bahwa usaha yang konsisten, doa yang tulus, dan
-                            pengalaman yang nyata adalah guru terbaik. Setiap langkah, setiap kegagalan, dan setiap
-                            keberhasilan adalah bagian dari cerita yang membentuk siapa saya hari ini.</p>
-                        <p>Di luar ruang kelas, saya tertarik pada teknologi, berbagi ide, dan terus bertumbuh bersama
-                            orang-orang di sekitar saya.</p>
-                    </div>
-                </div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Microsoft Excel</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
 
-                <div class="skills-panel comic-panel">
-                    <div class="panel-header">
-                        <h3 class="panel-title">SUPER SKILLS</h3>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-badge">
-                            <i class="fa-solid fa-table"></i>
-                            <span>Excel</span>
-                        </div>
-                        <div class="skill-badge">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Word</span>
-                        </div>
-                        <div class="skill-badge">
-                            <i class="fas fa-code"></i>
-                            <span>HTML/CSS</span>
-                        </div>
-                        <div class="skill-badge">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Coming Soon</p>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">EPIC PROJECTS</h2>
-                <div class="comic-divider"></div>
-            </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>No hp/WA: 0895368244060</p>
+            <p>Instagram: <a href="https://www.instagram.com/hanzz6944/" target="_blank">hanzz6944</a></p>
+        </section>
+    </main>
 
-            <div class="projects-grid">
-                <div class="project-card comic-panel">
-                    <div class="project-image">
-                        <img src="https://th.bing.com/th/id/OIP.AE4rudj7emFsbcLcOvvpJwHaE8?w=292&h=195&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-                            alt="Project 1">
-                        <div class="project-overlay">
-                            <button class="comic-button btn-action" onclick="openProject(1)">
-                                <span>POW!</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title 1</h3>
-                        <p class="project-description">Brief description of your amazing project and the superpowers you
-                            used to create it.</p>
-                        <div class="project-tags">
-                            <span class="tag">UI/UX</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card comic-panel">
-                    <div class="project-image">
-                        <img src="https://th.bing.com/th/id/OIP.P5EixhrO2V0vHauWcwlDJgHaE8?w=261&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-                            alt="Project 2">
-                        <div class="project-overlay">
-                            <button class="comic-button btn-action" onclick="openProject(2)">
-                                <span>ZAP!</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title 2</h3>
-                        <p class="project-description">Another fantastic project showcasing your incredible design
-                            abilities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Mobile</span>
-                            <span class="tag">React</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card comic-panel">
-                    <div class="project-image">
-                        <img src="https://th.bing.com/th/id/OIP.sNZ2xkFhVZ7vTdE2vlmjywHaE8?w=247&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-                            alt="Project 3">
-                        <div class="project-overlay">
-                            <button class="comic-button btn-action" onclick="openProject(3)">
-                                <span>BOOM!</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title 3</h3>
-                        <p class="project-description">A creative masterpiece that demonstrates your unique design
-                            vision.</p>
-                        <div class="project-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Print</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">LET'S TEAM UP!</h2>
-                <div class="comic-divider"></div>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info comic-panel">
-                    <div class="speech-bubble contact-bubble">
-                        <h3>Siap untuk berpetualang?</h3>
-                        <p>Mari kita ciptakan sesuatu yang MENAKJUBKAN bersama! Kirimkan pesan kepada saya dan mari kita
-                            bahas proyek super Anda berikutnya.</p>
-                    </div>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>fulanabdullah98@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+62 895-3682-44060</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Magelang, Indonesia</span>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://wa.me/62895368244060" class="social-link"><i
-                                class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="https://instagram.com/" class="social-link"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <form class="contact-form comic-panel" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="comic-button btn-primary">
-                        <span>SEND MESSAGE</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-panel comic-panel">
-                    <p>&copy; 2025 Khalil Hasan.</p>
-                </div>
-                <div class="footer-panel comic-panel">
-                    <p style="color: red;">WEB INI SEDANG DALAM PERBAIKAN!</p>
-                </div>
-                <div class="footer-panel comic-panel">
-                    <p>Terimakasih sudah mengunjungi</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
