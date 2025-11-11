@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil Hasan | Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00f3ff;
+            --secondary: #b967ff;
+            --dark-bg: #0a0a0f;
+            --dark-card: rgba(20, 20, 30, 0.7);
+            --text-light: #f0f0f0;
+            --text-muted: #a0a0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .particles-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--dark-bg);
+            border: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 243, 255, 0.3);
+        }
+
+        /* About Section */
+        #about {
+            background: var(--dark-bg);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1000px;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .skill-card {
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.2);
+            border-color: var(--primary);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 3px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-card {
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(185, 103, 255, 0.3);
+            border-color: var(--secondary);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-content {
+            padding: 20px;
+        }
+
+        .gallery-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: translateY(-5px);
+            color: var(--primary);
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-icon:hover .icon-circle {
+            background: rgba(0, 243, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+        }
+
+        .icon-circle i {
+            font-size: 1.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-icons {
+                gap: 15px;
+            }
+
+            .icon-circle {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="particles-bg" id="particles-js"></div>
+        <div class="container hero-content">
+            <h1>Khalil Hasan</h1>
+            <p class="tagline">Mengubah konsep menjadi karya digital yang elegan, fungsional, dan bermakna.</p>
+            <div class="cta-buttons">
+                <a href="#gallery" class="btn btn-primary">Lihat Galeri</a>
+                <a href="#contact" class="btn btn-secondary">Kontak Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container about-content fade-in">
+            <img src="https://th.bing.com/th/id/OIP.SUqxNlbBe0Tlp4NzsjzpPgHaE8?w=253&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3"
+                alt="Khalil Hasan" class="profile-img">
+            <div class="about-text">
+                <h2>Tentang Saya</h2>
+                <p style="text-align: justify;" id="typed-text">Saya Khalil Hasan, pelajar dengan minat besar pada dunia
+                    teknologi, desain
+                    interaktif, dan inovasi digital.</p>
+                <p style="text-align: justify;">Saya senang menciptakan pengalaman digital yang menarik dan fungsional
+                    dengan menggabungkan estetika
+                    modern dan teknologi terkini.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3 class="skill-name">Microsoft Excel</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">Analisis Data</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Galeri Saya</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card fade-in">
+                    <img src="sumbing.jpeg" alt="Kenangan 1" class="gallery-img">
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Gunung Sumbing</h3>
+                        <p class="gallery-desc">Pendakian ke Gunung Sumbing pada Selasa, 02 September 2025. <br>
+                            Pengalaman
+                            menaklukkan ketinggian dan menikmati keindahan awan di atas puncak Jawa Tengah.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <img src="pantai.jpeg" alt="Kenangan 2" class="gallery-img">
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Pantai Ngrumput, bukit Kosakora</h3>
+                        <p class="gallery-desc">Perjalanan ke Pantai Ngrumput dan Bukit Kosakora pada Kamis, 04
+                            September 2025 bersama rombongan santri TD. <br>
+                            Menikmati hamparan laut biru dan panorama tebing yang menenangkan di pesisir Gunungkidul.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <img src="bunga.jpeg" alt="Kenangan 3" class="gallery-img">
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Bunga Edelwis</h3>
+                        <p class="gallery-desc">Menemukan keindahan bunga edelweis di lereng Gunung Sumbing pada Rabu,
+                            02 September 2025.
+                            Simbol keabadian yang tumbuh di antara kabut dan bebatuan, mengingatkan akan keteguhan dan
+                            keindahan alam pegunungan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container contact-content">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p class="contact-text">Hubungi saya melalui platform favoritmu:</p>
+            <div class="contact-icons">
+                <a href="tel:+62895368244060" class="contact-icon">
+                    <div class="icon-circle">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <span>Telepon</span>
+                </a>
+                <a href="https://wa.me/62895368244060" class="contact-icon">
+                    <div class="icon-circle">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://t.me/+62895368244060" class="contact-icon">
+                    <div class="icon-circle">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://instagram.com/hanzz6944" class="contact-icon">
+                    <div class="icon-circle">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text" id="footer-typed">© 2025 Khalil Hasan. </p>
+        </div>
+    </footer>
+
+    <script>
+        // Animasi scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animasi fade-in saat scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+
+                        // Animasi progress bar untuk skills
+                        if (entry.target.classList.contains('skill-card')) {
+                            const progressBar = entry.target.querySelector('.progress');
+                            const width = progressBar.getAttribute('data-width');
+                            setTimeout(() => {
+                                progressBar.style.width = width + '%';
+                            }, 300);
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Animasi typing untuk teks about
+            const typedText = document.getElementById('typed-text');
+            const text = typedText.textContent;
+            typedText.textContent = '';
+
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    typedText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+
+            // Mulai animasi typing saat section about terlihat
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        typeWriter();
+                        aboutObserver.unobserve(entry.target);
+                    }
+                });
+            });
+
+            aboutObserver.observe(document.getElementById('about'));
+
+            // Animasi typing untuk footer
+            const footerText = document.getElementById('footer-typed');
+            const footerContent = footerText.textContent;
+            footerText.textContent = '';
+
+            let j = 0;
+            function footerTypeWriter() {
+                if (j < footerContent.length) {
+                    footerText.textContent += footerContent.charAt(j);
+                    j++;
+                    setTimeout(footerTypeWriter, 50);
+                }
+            }
+
+            // Mulai animasi typing saat footer terlihat
+            const footerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        footerTypeWriter();
+                        footerObserver.unobserve(entry.target);
+                    }
+                });
+            });
+
+            footerObserver.observe(document.querySelector('footer'));
+
+            // Efek parallax sederhana
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const hero = document.getElementById('hero');
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+
+            // Efek tilt pada gallery cards
+            const galleryCards = document.querySelectorAll('.gallery-card');
+            galleryCards.forEach(card => {
+                card.addEventListener('mousemove', function (e) {
+                    const cardRect = this.getBoundingClientRect();
+                    const x = e.clientX - cardRect.left;
+                    const y = e.clientY - cardRect.top;
+
+                    const centerX = cardRect.width / 2;
+                    const centerY = cardRect.height / 2;
+
+                    const angleY = (x - centerX) / 10;
+                    const angleX = (centerY - y) / 10;
+
+                    this.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-10px)`;
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(-10px)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
