@@ -471,6 +471,16 @@
                 height: 60px;
             }
         }
+        .judul{
+            background: url('gradient.jpg');
+            background-size: cover;
+            background-clip: text;
+            color : tranparent;
+            animation : animate 10s linear infinite;
+        }
+        @keyframes animate {
+            to{
+                background-position-x: -500px
     </style>
 </head>
 
@@ -479,7 +489,7 @@
     <section id="hero">
         <div class="particles-bg" id="particles-js"></div>
         <div class="container hero-content">
-            <h1>Khalil Hasan</h1>
+            <h1 class="judul">Khalil Hasan</h1>
             <p class="tagline">Mengubah konsep menjadi karya digital yang elegan, fungsional, dan bermakna.</p>
             <div class="cta-buttons">
                 <a href="#gallery" class="btn btn-primary">Lihat Galeri</a>
@@ -725,4 +735,5 @@
 
 
 </html>
+
 
