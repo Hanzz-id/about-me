@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalil Hasan | Portofolio</title>
-    <link rel="icon" href="AAA.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -92,13 +91,17 @@
         .hero-content h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background:url('gradient.png') repeat-x;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: fadeInDown 1s ease-out;
+            animation: animate 5s linear infinite;
         }
-        
+        @keyframes animate {
+            to{
+                background-position-x: -500px; 
+            }
+        }
 
         .tagline {
             font-size: 1.5rem;
@@ -472,11 +475,6 @@
                 height: 60px;
             }
         }
-        @keyframes animate {
-            to{
-                background-position-x: -500px;
-            }
-        }
     </style>
 </head>
 
@@ -547,9 +545,9 @@
                     <img src="sumbing.jpeg" alt="Kenangan 1" class="gallery-img">
                     <div class="gallery-content">
                         <h3 class="gallery-title">Gunung Sumbing</h3>
-                        <p class="gallery-desc">Pendakian ke Gunung Sumbing pada Selasa, 02 September 2025 bersama teman-teman. <br>
+                        <p class="gallery-desc">Pendakian ke Gunung Sumbing pada Selasa, 02 September 2025. <br>
                             Pengalaman
-                            menaklukkan ketinggian dan menikmati keindahan awan di atas puncak Jawa Tengah. Sungguh pengalaman yang mengasyikkan!🤩
+                            menaklukkan ketinggian dan menikmati keindahan awan di atas puncak Jawa Tengah.
                         </p>
                     </div>
                 </div>
@@ -729,15 +727,4 @@
     </script>
 </body>
 
-
 </html>
-
-
-
-
-
-
-
-
-
-
